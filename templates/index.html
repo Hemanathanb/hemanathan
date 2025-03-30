@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Spam Classifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Email Spam Classifier</h2>
+    <form method="post">
+        <textarea name="email_text" placeholder="Enter your email text here..."></textarea><br>
+        <button type="submit">Classify</button>
+    </form>
+    {% if result %}
+        <div class="result">The email is classified as: {{ result }}</div>
+    {% endif %}
+</body>
+</html>
